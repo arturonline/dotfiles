@@ -5,7 +5,7 @@ alias \
 	vimrc="nvim ~/.vimrc" \
 	zshrc="nvim ~/.zshrc" \
   bashrc="nvim ~/.bashrc" \
-	config='/usr/bin/git --git-dir=/home/artur/.dotfiles/ --work-tree=/home/artur' \
+	config='/usr/bin/git --git-dir=/home/artur/.cfg/ --work-tree=/home/artur' \
 	updt="sudo apt update; sudo apt upgrade -y; sudo flatpak update" \
   chmodx="chmod +x" \
   ..="cd .." \
@@ -17,7 +17,8 @@ alias \
   c="clear" \
   aliasrc="vim ~/.config/aliasrc" \
   docs="cd ~/dev/docs; ls" \
-  dev="cd ~/dev; ls"
+  dev="cd ~/dev; ls" \
+  apt="sudo apt"
 	
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
