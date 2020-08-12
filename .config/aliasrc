@@ -2,11 +2,11 @@
 
 alias \
   vi="nvim" \
-	vimrc="nvim ~/.vimrc" \
-	zshrc="nvim ~/.zshrc" \
+  vimrc="nvim ~/.vimrc" \
+  zshrc="nvim ~/.zshrc" \
   bashrc="nvim ~/.bashrc" \
-	config='/usr/bin/git --git-dir=/home/artur/.cfg/ --work-tree=/home/artur' \
-	updt="sudo apt update; sudo apt upgrade -y; sudo flatpak update" \
+  config='/usr/bin/git --git-dir=/home/artur/.cfg/ --work-tree=/home/artur' \
+  updt="sudo apt update; sudo apt upgrade -y; sudo flatpak update" \
   chmodx="chmod +x" \
   ..="cd .." \
   ...="cd ../.." \
@@ -17,6 +17,7 @@ alias \
   c="clear" \
   aliasrc="vim ~/.config/aliasrc" \
   docs="cd ~/dev/docs; ls" \
+  dow="cd ~/Downloads; ls" \
   dev="cd ~/dev; ls" \
   apt="sudo apt"
 	
