@@ -1,0 +1,49 @@
+#!/bin/sh
+
+alias \
+  vi="nvim" \
+	vimrc="nvim ~/.vimrc" \
+	zshrc="nvim ~/.zshrc" \
+  bashrc="nvim ~/.bashrc" \
+	config='/usr/bin/git --git-dir=/home/artur/.dotfiles/ --work-tree=/home/artur' \
+	updt="sudo apt update; sudo apt upgrade -y; sudo flatpak update" \
+  chmodx="chmod +x" \
+  ..="cd .." \
+  ...="cd ../.." \
+  ....="cd ../../.." \
+  .....="cd ../../../.." \
+  cat="bat" \
+  pdf="zathura" \
+  c="clear" \
+  aliasrc="vim ~/.config/aliasrc" \
+  docs="cd ~/dev/docs; ls" \
+  dev="cd ~/dev; ls"
+	
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+  ls="ls --color --group-directories-first" \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# Colorize commands when possible.
+alias \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	ka="killall" \
+	f="$FILE" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	p="sudo pacman" \
+	z="zathura"
+
+alias \
+	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" 
