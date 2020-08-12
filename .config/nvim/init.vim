@@ -6,36 +6,73 @@
 
 " Artur Badenes Puig
 " ARCH LINUX
+" :so % => reload file
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 " various settings
 
+" Allow improved things
 set nocompatible
-filetype plugin on
+
+" Syntax
 syntax on
 filetype plugin indent on
+
+" mod key space
 let mapleader=' '
-set autoindent                 " Minimal automatic indenting for any filetype.
-set smartindent
-set backspace=indent,eol,start " Proper backspace behavior.
-set incsearch                  " Incremental search, hit `<CR>` to stop.
-set ruler                      " Shows the current line number at the bottom-right
-                               " of the screen.
-set wildmenu                   " Great command-line completion, use `<Tab>` to move
-set hidden
-                               " around and `<CR>` to validate.
+
+" Proper backspace behavior.
+set backspace=indent,eol,start    
+
+" Incremental search, hit `<CR>` to stop.
+set incsearch                    
+
+" Removes highlight of previous search.
+set nohlsearch
+
+" Shows the current line number at the bottom-right
+set ruler    
+
+" set lateral number relative to cursor
 set relativenumber
 
-set shiftwidth=2 " number of spaces when shift indenting
-set tabstop=2 " number of visual spaces per tab
-set softtabstop=2 " number of spaces in tab when editing
-set expandtab " tab to spaces
+" wraps long lines 
+set linebreak
 
+" Great command-line completion, use `<Tab>` to move
+set wildmenu                      
+
+set hidden
+
+" number of spaces when shift indenting
+set shiftwidth=4             
+
+" number of visual spaces per tab
+set tabstop=4              
+
+" number of spaces in tab when editing
+set softtabstop=4             
+
+" indents and tab stuff 
+set expandtab                
+set autoindent               
+set smartindent
+set smarttab
+
+" No backups
 set nobackup
 set nowritebackup
 set noswapfile
+
+" Undo between sessions
 set undodir=~/.config/nvim/undodir
 set undofile
+
+" Keep cursor in the middle of the screen
+set scrolloff=7             
+
+" Increase buffer size for large chunks of text
+set viminfo='20,<1000,s1000
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Special functionality
@@ -113,14 +150,14 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'SirVer/ultisnips'
+"Plug 'rust-lang/rust.vim'
+"Plug 'SirVer/ultisnips'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:airline_theme='gruvbox'
 set background=dark
 
 colorscheme gruvbox
@@ -154,16 +191,10 @@ nnoremap <silent> <leader>ga :BCommits<CR>
 nnoremap <silent> <leader>ft :Filetypes<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Colorize CSS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
-"let g:Hexokinase_highlighters = ['backgroundfull']
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline options
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+let g:airline_theme = 'gruvbox'
 let g:airline_powerline_fonts = 1
 let g:airline_section_b = '%{getcwd()}' " in section B of the status line display the CWD
 
@@ -171,8 +202,8 @@ let g:airline_section_b = '%{getcwd()}' " in section B of the status line displa
 " VimWiki
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"let g:vimwiki_list = [{'path': 'doc/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
+" let g:vimwiki_list = [{'path': 'doc/vimwiki/',
+"                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Goyo
@@ -192,17 +223,17 @@ let g:airline_section_b = '%{getcwd()}' " in section B of the status line displa
 " syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 "
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 "
-"let g:syntastic_error_symbol = "✗"
-"let g:syntastic_warning_symbol = "⚠"
+" let g:syntastic_error_symbol = "✗"
+" let g:syntastic_warning_symbol = "⚠"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Markdown
@@ -247,15 +278,8 @@ ab :computer: 💻
 
 "" https://github.com/fatih/vim-go/wiki/Tutorial#quick-setup
 
-"" - Use ctrl-] or gd to jump to a definition, locally or globally
-"" - Use ctrl-t to jump back to the previous location"
-"" - ]] -> jump to next function
-"" - [[ -> jump to previous function
-"" - Shift + k in normal mode go to docs
-
 "" auto imports on save
 let g:go_fmt_command = "goimports"
-let g:go_metalinter_autosave = 1
 
 "" There are many helpful snippets: https://github.com/fatih/vim-go/blob/master/gosnippets/UltiSnips/go.snippets 
 
@@ -265,8 +289,4 @@ autocmd FileType go nmap <leader>r  <Plug>(go-run)
 
 let g:go_fmt_command = 'goimports' " autoupdate import
 let g:go_fmt_autosave = 1
-set autowrite
 
-map <leader>n :cnext<CR>
-map <leader>p :cprevious<CR>
-nnoremap <leader>a :cclose<CR>
