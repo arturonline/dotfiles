@@ -76,7 +76,7 @@ plugins=(
 )
 
 # Autostart tmux 
-#ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART=true
 
 # Automatically connect to a previous session if it exits.
 ZSH_TMUX_AUTOCONNECT=true

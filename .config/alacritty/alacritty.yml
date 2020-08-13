@@ -135,7 +135,7 @@ font:
   #style: Bold Italic
 
   # Point size
-  size: 11.0
+  size: 10.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -313,7 +313,7 @@ background_opacity: 0.98
 #save_to_clipboard: false
 
 # Allow terminal applications to change Alacritty's window title.
-#dynamic_title: true
+# dynamic_title: true
 
 cursor:
   # Cursor style
@@ -322,7 +322,7 @@ cursor:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  style: Block
+    style: Block
 
   # Vi mode cursor style
   #
@@ -384,7 +384,7 @@ cursor:
 #triple_click: { threshold: 300 }
 # If this is `true`, the cursor is temporarily hidden when typing.  hide_when_typing: false
 
-#url:
+url:
 # URL launcher
 #
 # This program is executed when clicking on a text which is recognized as a URL.
@@ -428,8 +428,8 @@ launcher:
 # And optionally:
 #
 # - `mods` (see key bindings)
-#mouse_bindings:
-#  - { mouse: Middle, action: PasteSelection }
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
 
 # Key bindings
 #
