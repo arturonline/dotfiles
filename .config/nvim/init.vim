@@ -11,6 +11,9 @@
 
 " various settings
 
+" mouse on
+set mouse=a
+
 " Allow improved things
 set nocompatible
 
