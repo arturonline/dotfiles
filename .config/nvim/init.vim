@@ -154,7 +154,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Plug 'rust-lang/rust.vim'
-"Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
