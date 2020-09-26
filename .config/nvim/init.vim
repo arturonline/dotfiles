@@ -152,9 +152,9 @@ Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Plug 'rust-lang/rust.vim'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -282,14 +282,14 @@ ab :computer: 💻
 "" https://github.com/fatih/vim-go/wiki/Tutorial#quick-setup
 
 "" auto imports on save
-let g:go_fmt_command = "goimports"
+"let g:go_fmt_command = "goimports"
 
 "" There are many helpful snippets: https://github.com/fatih/vim-go/blob/master/gosnippets/UltiSnips/go.snippets 
 
 "" shortcut to build and run
-autocmd FileType go nmap <leader>b  <Plug>(go-build)
-autocmd FileType go nmap <leader>r  <Plug>(go-run)
+"autocmd FileType go nmap <leader>b  <Plug>(go-build)
+"autocmd FileType go nmap <leader>r  <Plug>(go-run)
 
-let g:go_fmt_command = 'goimports' " autoupdate import
-let g:go_fmt_autosave = 1
+"let g:go_fmt_command = 'goimports' " autoupdate import
+"let g:go_fmt_autosave = 1
 
