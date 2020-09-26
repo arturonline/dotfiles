@@ -17,6 +17,8 @@ alias \
   c="clear" \
   aliasrc="vim ~/.config/aliasrc" \
   docs="cd ~/dev/docs; ls" \
+  dam2="cd ~/dev/dam2; ls" \
+  dam="cd ~/dev/dam2; ls" \
   dow="cd ~/Downloads; ls" \
   dev="cd ~/dev; ls" \
   apt="sudo apt"
