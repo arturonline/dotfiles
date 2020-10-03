@@ -2,7 +2,7 @@
 
 alias \
   vi="nvim" \
-  vimrc="nvim ~/.vimrc" \
+  vimrc="nvim ~/config/nvim/init.vim" \
   zshrc="nvim ~/.zshrc" \
   bashrc="nvim ~/.bashrc" \
   config='/usr/bin/git --git-dir=/home/artur/.cfg/ --work-tree=/home/artur' \
