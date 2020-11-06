@@ -31,10 +31,10 @@ config commit -m "Add bashrc"config push
 
 
 ```bash
-git clone --bare <git-repo-url> $HOME/.cfg
+git clone --bare <git-repo-url> $HOME/.dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-config [checkout](checkout)
 config config --local status.showUntrackedFiles no
+config checkout
 ```
 
 You're done, from now on you can now type config commands to add and update your dotfiles.
